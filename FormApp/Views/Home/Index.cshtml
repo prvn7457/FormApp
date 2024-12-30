@@ -1,0 +1,129 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model CMRAFormModel
+<form asp-action="SubmitForm" method="post" enctype="multipart/form-data" class="container mt-4 border p-4">
+    <h3 class="text-center mb-4">CMRA Form</h3>
+
+    <!-- PMB Information -->
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="DatePMBOpened">1a. Date PMB Opened</label>
+            <input type="date" id="DatePMBOpened" name="DatePMBOpened" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label for="DatePMBClosed">1b. Date PMB Closed</label>
+            <input type="text" id="DatePMBClosed" name="DatePMBClosed" class="form-control" />
+        </div>
+    </div>
+
+    <!-- Address for Delivery -->
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="StreetAddressDelivery">2a. Street Address to be Used for Delivery</label>
+            <input type="text" id="StreetAddressDelivery" name="StreetAddressDelivery" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label for="PMBNumber">2b. PMB #</label>
+            <input type="text" id="PMBNumber" name="PMBNumber" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label for="City">2c. City</label>
+            <input type="text" id="City" name="City" class="form-control" />
+        </div>
+    </div>
+
+    <!-- Business or Residential Use -->
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <label>Type of Use</label>
+            <div class="form-check">
+                <input type="radio" id="BusinessUse" name="UseType" value="Business/Organization" class="form-check-input" />
+                <label for="BusinessUse" class="form-check-label">Business/Organization Use</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="ResidentialUse" name="UseType" value="Residential/Personal" class="form-check-input" />
+                <label for="ResidentialUse" class="form-check-label">Residential/Personal Use</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Information -->
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="BusinessName">7a. Name of Business/Organization</label>
+            <input type="text" id="BusinessName" name="BusinessName" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label for="BusinessType">7b. Type of Business</label>
+            <input type="text" id="BusinessType" name="BusinessType" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <label for="BusinessCity">7d. City</label>
+            <input type="text" id="BusinessCity" name="BusinessCity" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label for="BusinessState">7e. State</label>
+            <select id="BusinessState" name="BusinessState" class="form-select">
+                <option value="">--Select State--</option>
+                <option value="CA">California</option>
+                <option value="NY">New York</option>
+                <option value="TX">Texas</option>
+                <option value="MN">Minnesota</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="BusinessZIP">7f. ZIP + 4</label>
+            <input type="text" id="BusinessZIP" name="BusinessZIP" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label for="BusinessCountry">7g. Country</label>
+            <select id="BusinessCountry" name="BusinessCountry" class="form-select">
+                <option value="">--Select Country--</option>
+                <option value="USA">United States</option>
+                <option value="CA">Canada</option>
+                <option value="US">US</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- File Upload Section -->
+    <div class="row mb-3">
+        <label>Documents to Upload</label>
+        <div class="col-md-4">
+            <label for="PhotoID">Photo ID</label>
+            <input type="file" id="PhotoID" name="PhotoID" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label for="AddressID">Address ID</label>
+            <input type="file" id="AddressID" name="AddressID" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label for="Form1583">Form 1583 Image Document</label>
+            <input type="file" id="Form1583" name="Form1583" class="form-control" />
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="row mt-4 text-center">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
